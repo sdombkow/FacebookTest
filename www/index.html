@@ -79,13 +79,37 @@
 			}
 			
 			function FacebookShareTwo() {
-				facebookConnectPlugin.showDialog( 
-				    {
+				var connected = "false";
+				console.log("Before Get Login Status")
+				console.log("Connect: " + connected)
+				facebookConnectPlugin.getLoginStatus( function(response) {
+					if (response.status === 'connected') {
+						connected="true";
+				  	} else if (response.status === 'not_authorized') {
+						facebookConnectPlugin.login(facebookConnectPlugin.login(["public_profile"],
+						    connected="true",
+						    function (error) { alert("" + error) }
+						);
+				  	} else {
+				    	facebookConnectPlugin.login(facebookConnectPlugin.login(["public_profile"],
+						    connected="true",
+						    function (error) { alert("" + error) }
+						);
+				  	}
+				});
+				console.log("Past Get Login Status")
+				console.log("Connect: " + connected)
+				if (connected="true") {
+					facebookConnectPlugin.showDialog( {
 						method: 'share',
 						href: 'http://local-storm-779.appspot.com'
-				    }, 
-				    function (response) { alert(JSON.stringify(response)) },
-				    function (response) { alert(JSON.stringify(response)) });
+				 		}, 
+				    	function (response) { alert(JSON.stringify(response)) },
+				    	function (response) { alert(JSON.stringify(response)) }
+					);
+				}
+				console.log("Done Get Login Status")
+				console.log("Connect: " + connected)
 			}
 		</script>
     </body>
