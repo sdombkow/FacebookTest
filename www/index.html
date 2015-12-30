@@ -86,11 +86,11 @@
 				  if (response.status === 'connected') {
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
-					alert("Connected");
+					alert("Connected: " + reponse.status);
 				  } else if (response.status === 'not_authorized') {
-				    alert("Not Authorized");
+				    alert("Not Authorized:"+ reponse.status);
 				  } else {
-				    alert("Other");
+				    alert("Other: "+ reponse.status);
 				  }
 				 });
 				/*facebookConnectPlugin.getLoginStatus( function(response) {
