@@ -79,7 +79,7 @@
 			}
 			
 			function FacebookShareTwo() {
-				var connected = "false";
+				/*var connected = "false";
 				console.log("Before Get Login Status")
 				console.log("Connect: " + connected)
 				facebookConnectPlugin.getLoginStatus( function(response) {
@@ -99,7 +99,7 @@
 				});
 				console.log("Past Get Login Status")
 				console.log("Connect: " + connected)
-				if (connected="true") {
+				if (connected="true") {*/
 					facebookConnectPlugin.showDialog( {
 						method: 'share',
 						href: 'http://local-storm-779.appspot.com'
@@ -107,9 +107,9 @@
 				    	function (response) { alert(JSON.stringify(response)) },
 				    	function (response) { alert(JSON.stringify(response)) }
 					);
-				}
+				/*}
 				console.log("Done Get Login Status")
-				console.log("Connect: " + connected)
+				console.log("Connect: " + connected)*/
 			}
 		</script>
     </body>
