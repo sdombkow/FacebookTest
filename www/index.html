@@ -91,7 +91,7 @@
 				    	alert("Not Authorized:"+ response.status);
 				  	} else {
 				    	alert("Other: "+ response.status);
-						facebookConnectPlugin.login(["public_profile"], alert("Succesful Logging In: " + response.status), alert("Unsuccesful Logging In: " + response.status));
+						facebookConnectPlugin.login(["email"], alert("Succesful Logging In: " + response.status), alert("Unsuccesful Logging In: " + response.status));
 				  	}
 				});
 				alert("Past Get Login Status");
