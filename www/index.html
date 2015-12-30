@@ -100,7 +100,10 @@
 						);
 				  	}
 				});*/
-				if (connected="true") {*/
+				alert("Past Get Login Status");
+				alert("Connect: " + connected);
+				if (connected="true") {
+					alert("In Connected Equals True");
 					facebookConnectPlugin.showDialog( {
 						method: 'share',
 						href: 'http://local-storm-779.appspot.com'
@@ -109,6 +112,8 @@
 				    	function (response) { alert(JSON.stringify(response)) }
 					);
 				}
+				alert("Done Get Login Status");
+				alert("Connect: " + connected);
 			}
 		</script>
     </body>
