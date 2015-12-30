@@ -93,27 +93,10 @@
 				    	alert("Other: "+ response.status);
 						facebookConnectPlugin.login(["public_profile"], alert("Succesful Logging In: " + response.status), alert("Unsuccesful Logging In: " + response.status));
 				  	}
-				 });
-				/*facebookConnectPlugin.getLoginStatus( function(response) {
-					if (response.status === 'connected') {
-						alert("In Connected If Loop");
-						connected="true";
-				  	} else if (response.status === 'not_authorized') {
-						alert("In Not Authorized If Loop");
-						facebookConnectPlugin.login(facebookConnectPlugin.login(["public_profile"],
-						    connected="true",
-						    function (error) { alert("" + error) }
-						);
-				  	} else {
-						alert("In Last If Loop");
-				    	facebookConnectPlugin.login(facebookConnectPlugin.login(["public_profile"],
-						    connected="true",
-						    function (error) { alert("" + error) }
-						);
-				  	}
-				});*/
+				});
 				alert("Past Get Login Status");
 				alert("Connect: " + connected);
+				connected="true";
 				if (connected=="true") {
 					alert("In Connected Equals True");
 					facebookConnectPlugin.showDialog( {
