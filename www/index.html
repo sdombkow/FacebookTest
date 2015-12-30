@@ -82,6 +82,17 @@
 				var connected = "false";
 				alert("Before Get Login Status");
 				alert("Connect: " + connected);
+				facebookConnectPlugin.getLoginStatus(function(response) {
+				  if (response.status === 'connected') {
+				    var uid = response.authResponse.userID;
+				    var accessToken = response.authResponse.accessToken;
+					alert("Connected");
+				  } else if (response.status === 'not_authorized') {
+				    alert("Not Authorized");
+				  } else {
+				    alert("Other");
+				  }
+				 });
 				/*facebookConnectPlugin.getLoginStatus( function(response) {
 					if (response.status === 'connected') {
 						alert("In Connected If Loop");
@@ -102,7 +113,7 @@
 				});*/
 				alert("Past Get Login Status");
 				alert("Connect: " + connected);
-				if (connected="true") {
+				if (connected=="true") {
 					alert("In Connected Equals True");
 					facebookConnectPlugin.showDialog( {
 						method: 'share',
